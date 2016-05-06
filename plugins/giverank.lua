@@ -386,12 +386,12 @@ end
 
 return {
   patterns = {
-  	"^[!/#](rank) (.*) (.*)$",
-  	"^[!/#](rank) (.*)$",
-  	"^[!/#](admins)$",
-  	"^[!/#](mods)$",
-  	"^[!/#](members)$",
-  	"^[!/#](members) (.*)$"
+  	"^(rank) (.*) (.*)$",
+  	"^(rank) (.*)$",
+  	"^(admins)$",
+  	"^(mods)$",
+  	"^(members)$",
+  	"^(members) (.*)$"
   },
   run = run
 }
