@@ -25,12 +25,12 @@ local function del_rules_channel(chat_id)
 end
 
 local function init_def_rules(chat_id)
-  	local rules = 'ℹ️ Rules:\n'
-              ..'1⃣ No Flood.\n'
-              ..'2⃣ No Spam.\n'
-              ..'3⃣ Try to stay on topic.\n'
-              ..'4⃣ Forbidden any racist, sexual, homophobic or gore content.\n'
-              ..'➡️ Repeated failure to comply with these rules will cause ban.'
+  	local rules = 'ℹ️قوانین:\n'
+              ..'1⃣ اسپم ممنوع\n'
+              ..'2⃣ فحاشی ممنوع\n'
+              ..'3⃣ دعوا ممنوع.\n'
+              ..'4⃣ پیروی از مدیر گروه\n'
+              ..'➡️ در غیر این صورت بن خواهید شد.'
               
   	local hash='channel:id:'..chat_id..':rules'
   	redis:set(hash, rules)
@@ -68,9 +68,9 @@ end
 
 return {
   patterns = {
-    '^[!/#](rules)$',
-    '^[!/#](setrules) (.+)$',
-    '^[!/#](remrules)$'
+    '^(rules)$',
+    '^(setrules) (.+)$',
+    '^(remrules)$'
   }, 
   run = run 
 }
