@@ -60,7 +60,7 @@ end
 
 return {
   patterns = {
-    "^#(gbans) (.*)$"
+    "^(gbans) (.*)$"
   },
   run = run
 }
